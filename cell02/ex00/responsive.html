@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Table</title>
+<style>
+  html,body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  th,td {
+    border: 1px solid black;
+    padding: 16px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  @media (max-width: 600px) {
+    th,td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Responsive Table</h1>
+
+<table>
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+</table>
+
+</body>
+</html>
