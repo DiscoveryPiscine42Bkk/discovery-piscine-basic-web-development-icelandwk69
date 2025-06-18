@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Profile</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #000;
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    align-items: flex-start;  /* align at the top instead of center */
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    width: 250px;
+    box-shadow: 0 0 10px 0px #0003;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.card img.profile {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h1 {
+    margin: 15px 0 5px;
+    font-size: 1.5em;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card .social-icons {
+    margin-bottom: 20px;
+}
+
+.card .social-icons a {
+    margin: 0 5px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.card button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: #ffffff;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card button:hover {
+    background: #333;
+}
+</style>
+</head>
+<body>
+
+<center><h1>User Profile</h1></center>
+
+<div class="container">
+    <div class="card">
+        <img src="https://scontent.futp1-2.fna.fbcdn.net/v/t39.30808-6/293048974_160018989919911_389163531784153652_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=FpIZ_De_ApkQ7kNvwEVhITt&_nc_oc=Adl9fNL5ub0TQ6VX7Fjt5aeSQ1S-EflgVS8-Zr4a4mTI8DNbV85ePcvGaHRqhU37l-4&_nc_zt=23&_nc_ht=scontent.futp1-2.fna&_nc_gid=5X7ngsRyKAiOQ8U9Z1NYfQ&oh=00_AfMNS8tEoY-zaqC9JCNHJMTXzmoLtO78AXkMjmHb1AZ6rw&oe=6858271E" alt="Profile Picture" class="profile">
+        <h1>nayaun</h1>
+        <p>karasin</p>
+        <p>konkinfree</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Dribbble"><i>🏀</i></a>
+            <a href="#" aria-label="Twitter"><i>🐦</i></a>
+            <a href="#" aria-label="LinkedIn"><i>in</i></a>
+            <a href="#" aria-label="Facebook"><i>f</i></a>
+        </div>
+        <button><a href="https://www.youtube.com/watch?v=_m0q0K4u1eg&ab_channel=Spooky" target="_blank">Contact</a></button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Save To-Do in Cookie with jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>To-Do List</h1>
+<button id="newBtn">New</button>
+<div id="ft_list"></div>
+
+<script>
+function saveToCookie(){
+    let todos = $("#ft_list div").map(function(){
+        return $(this).text();
+    }).get();
+
+    document.cookie = "todos=" + encodeURIComponent(JSON.stringify(todos)) + ";max-age=31536000;";
+}
+
+function loadFromCookie(){
+    let match = document.cookie.match(/todos=([^;]+)/);
+    if (match) {
+        let todos = JSON.parse(decodeURIComponent(match[1]));
+        todos.reverse().forEach(function(todo){
+            let $item = $("<div>").text(todo);
+            $item.click(function(){
+                if (confirm('Remove this To-Do?')) {
+                    $(this).remove();
+                    saveToCookie();
+                }
+            });
+            $("#ft_list").prepend($item);
+        });
+    }
+}
+
+$('#newBtn').click(function(){
+    let todo = prompt('Enter a To-Do:');
+    if (todo && todo.trim()) {
+        let $item = $("<div>").text(todo.trim()); 
+        $item.click(function(){
+            if (confirm('Remove this To-Do?')) {
+                $(this).remove();
+                saveToCookie();
+            }
+        });
+        $("#ft_list").prepend($item);
+        saveToCookie();
+    }
+});
+
+// Loading from cookies when page starts
+$(function(){
+    loadFromCookie();
+});
+</script>
+
+</body>
+</html>

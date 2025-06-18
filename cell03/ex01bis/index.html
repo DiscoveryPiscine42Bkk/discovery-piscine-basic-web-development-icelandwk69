@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Remove To-Do with jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>To-Do List</h1>
+<button id="newBtn">New</button>
+<div id="ft_list"></div>
+
+<script>
+$('#newBtn').click(function(){
+    let todo = prompt('Enter a To-Do:');
+    if (todo && todo.trim()) {
+        let $item = $("<div>").text(todo.trim()); 
+        $item.click(function(){
+            if (confirm('Remove this To-Do?')) {
+                $(this).remove();
+            }
+        });
+       $('#ft_list').prepend($item);
+    }
+});
+
+// Delegate is another way:
+//$('#ft_list').on('click', 'div', function(){
+//    if (confirm('Remove this To-Do?')) {
+//        $(this).remove();
+//    }
+//});
+</script>
+
+</body>
+</html>

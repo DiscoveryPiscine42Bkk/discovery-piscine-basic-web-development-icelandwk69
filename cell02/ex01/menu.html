@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SNCF Sandwich</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 50px;
+  color: #333;
+  background: #fff5cc;
+}
+
+.nav {
+  display: inline-block;
+  position: relative;
+  background: #ffcc5b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0003;
+}
+
+.nav > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: block;
+  background: #ff9900;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav > a:hover {
+  background: #ffcc5b;
+}
+
+.nav ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffcc5b;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 10px #0003;
+}
+
+.nav:hover ul {
+  display: block;
+}
+
+.nav ul li {
+  padding: 10px 20px;
+  color: #000;
+  transition: background 0.3s ease;
+}
+
+.nav ul li:hover {
+  background: #ff9900;
+  color: #fff;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<h1>SNCF "Drop-down Menu"</h1>
+
+<nav class="nav">
+  <a href="">🥪 Sandwich Menu</a>
+  <ul>
+    <li>🥖 Baguette</li>
+    <li>🧀 Emmental</li>
+    <li>🥕 Cornichons</li>
+    <li>🍖 Jambon de Paris</li>
+    <li>🥬 Lettuce</li>
+    <li>🥥 Butter</li>
+  </ul>
+</nav>
+
+</body>
+</html>
